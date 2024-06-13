@@ -4,7 +4,7 @@
 // @description good
 // @include         https://*.youtube.com/watch*
 // @version     1
-// @updateURL   https://raw.githubusercontent.com/dollarskate/dodgyyoutube/main/yt_dodgy_embed.js
+// @downloadURL   https://raw.githubusercontent.com/dollarskate/dodgyyoutube/main/yt_dodgy_embed.js
 // ==/UserScript==
 
 function diabolicallyBad()
