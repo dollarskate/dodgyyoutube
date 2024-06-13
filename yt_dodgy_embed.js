@@ -3,7 +3,7 @@
 // @namespace   w/e
 // @description good
 // @include         https://*.youtube.com/*
-// @version     3
+// @version     4
 // @downloadURL   https://raw.githubusercontent.com/dollarskate/dodgyyoutube/main/yt_dodgy_embed.js
 // @require      http://code.jquery.com/jquery-3.4.1.min.js
 // ==/UserScript==
@@ -43,7 +43,23 @@ function diabolicallyBad()
             console.log("my goodness, what are you doing?");
             //just sort of randomly tried some css until it worked
             containerElement.append('<iframe id="myverycoolembededvid" src="'+url+'" style="height: -webkit-fill-available; width: -webkit-fill-available;top: 0; position: absolute;"></iframe>');
+            //try set focus
+            trySetFocusAttempts(6);
         }
+    }
+}
+
+function trySetFocusAttempts(attempt)
+{
+    if (attempt == 0) return;
+    var iframeVideoElem = jQuery("#myverycoolembededvid").contents().find("video");
+    if (iframeVideoElem.length > 0)
+    {
+        iframeVideoElem[0].focus();
+    }
+    else
+    {
+        setTimeout(()=>{trySetFocusAttempts(attempt-1)}, 500);
     }
 }
 
