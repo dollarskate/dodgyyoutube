@@ -2,8 +2,8 @@
 // @name        Youtube dodgy embed swap
 // @namespace   w/e
 // @description good
-// @include         https://*.youtube.com/watch*
-// @version     1
+// @include         https://*.youtube.com/*
+// @version     2
 // @downloadURL   https://raw.githubusercontent.com/dollarskate/dodgyyoutube/main/yt_dodgy_embed.js
 // ==/UserScript==
 
